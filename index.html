@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leonardo Maioli — Portfólio de Projetos</title>
+<meta name="description" content="Portfólio de Leonardo Severgnine Maioli: projetos de automação de processos, sistemas e dados.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%AA%90%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#f3f1ff;--bg2:#e4e0ff;--fg:#14123a;--mut:#51507c;--card:rgba(255,255,255,.7);--line:rgba(80,70,200,.25);--a:#2f6fe0;--b:#6a42e8;--star:rgba(60,50,160,.35);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060919;--bg2:#0d1236;--fg:#e9ebff;--mut:#9ca4d4;--card:rgba(20,26,70,.55);--line:rgba(130,140,255,.22);--a:#4da3ff;--b:#8b6cff;--star:rgba(255,255,255,.85)}}
+:root[data-theme="dark"]{--bg:#060919;--bg2:#0d1236;--fg:#e9ebff;--mut:#9ca4d4;--card:rgba(20,26,70,.55);--line:rgba(130,140,255,.22);--a:#4da3ff;--b:#8b6cff;--star:rgba(255,255,255,.85)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif;min-height:100vh;position:relative;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:radial-gradient(60vw 40vw at 85% -5%,color-mix(in srgb,var(--b) 35%,transparent),transparent 70%),
+radial-gradient(50vw 40vw at -5% 40%,color-mix(in srgb,var(--a) 28%,transparent),transparent 70%),
+radial-gradient(1.4px 1.4px at 12% 18%,var(--star),transparent),radial-gradient(1px 1px at 28% 72%,var(--star),transparent),
+radial-gradient(1.6px 1.6px at 44% 30%,var(--star),transparent),radial-gradient(1px 1px at 63% 12%,var(--star),transparent),
+radial-gradient(1.3px 1.3px at 78% 58%,var(--star),transparent),radial-gradient(1px 1px at 90% 84%,var(--star),transparent),
+radial-gradient(1.2px 1.2px at 6% 90%,var(--star),transparent),radial-gradient(1px 1px at 52% 92%,var(--star),transparent),
+linear-gradient(var(--bg),var(--bg2))}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--a)}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{font:700 18px "Space Grotesk",sans-serif;background:none;border:0;color:var(--fg);cursor:pointer;padding:0;margin-right:auto}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav button{font:500 15px "IBM Plex Sans",sans-serif;color:var(--mut);background:none;border:1px solid transparent;border-radius:999px;padding:6px 14px;cursor:pointer}
+nav button:hover{color:var(--fg)}
+nav button[aria-current="true"]{color:var(--fg);border-color:var(--line);background:var(--card)}
+.hero{padding:72px 0 36px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.photo{width:clamp(200px,28vw,300px);aspect-ratio:1;border-radius:50%;padding:5px;background:linear-gradient(140deg,var(--a),var(--b));box-shadow:0 0 70px color-mix(in srgb,var(--b) 50%,transparent)}
+.photo>div,.photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:grid;place-items:center;background:var(--bg2);color:var(--mut);font:500 15px "IBM Plex Sans",sans-serif;text-align:center}
+@media (max-width:760px){.hero{grid-template-columns:1fr;gap:28px;padding-top:40px}.photo{order:-1;width:160px}}
+.hero h1{font-size:clamp(34px,6.4vw,64px);max-width:15ch;letter-spacing:-.02em}
+.hero p{max-width:56ch;color:var(--mut);font-size:19px;margin:20px 0 26px}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font:500 15px "IBM Plex Sans",sans-serif;padding:10px 20px;border-radius:999px;border:1px solid var(--line);color:var(--fg);background:var(--card)}
+.btn.main{border:0;color:#fff;background:linear-gradient(120deg,var(--a),var(--b))}
+.sel{padding:30px 0 80px}
+.sel h2{font-size:22px;margin-bottom:6px}
+.sel>p{color:var(--mut);margin:0 0 26px}
+.orbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.orb{display:flex;gap:18px;align-items:center;text-align:left;font:inherit;color:var(--fg);cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px}
+.orb:hover{border-color:var(--b)}
+.planet{flex:none;width:76px;height:76px;border-radius:50%;box-shadow:inset -10px -10px 22px rgba(0,0,0,.35),0 0 34px color-mix(in srgb,var(--b) 55%,transparent)}
+.p1{background:radial-gradient(circle at 30% 28%,#9fd0ff,#4d6cff 55%,#2a1a8a)}
+.p2{background:radial-gradient(circle at 30% 28%,#d3b8ff,#8b4dff 55%,#3b1a8a)}
+.orb h3{font-size:20px;margin-bottom:4px}
+.orb span{color:var(--mut);font-size:15px;line-height:1.4;display:block}
+.case{padding:44px 0 90px}
+.back{font:500 15px "IBM Plex Sans",sans-serif;color:var(--a);background:none;border:0;cursor:pointer;padding:0;margin-bottom:22px}
+.case h1{font-size:clamp(30px,5vw,48px);letter-spacing:-.015em;max-width:26ch}
+.lead{color:var(--mut);font-size:19px;max-width:95ch;margin:16px 0 0}
+.kpis{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 8px}
+.kpi{flex:1 1 150px;border-left:2px solid var(--b);padding:2px 0 2px 14px}
+.kpi b{display:block;font:700 34px "Space Grotesk",sans-serif;background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi small{color:var(--mut);font-size:14px;line-height:1.3;display:block}
+section.blk{margin-top:52px}
+section.blk h2{font-size:24px;margin-bottom:12px}
+section.blk p{max-width:none;margin:0 0 12px}
+.ba{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.ba>div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.ba h3{font-size:17px;margin-bottom:8px}
+.ba ul{margin:0;padding-left:18px;color:var(--mut)}
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 8px;align-items:stretch}
+.flow li{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:15px;line-height:1.35;flex:1 1 150px}
+.flow li:not(:last-child)::after{content:"›";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--b);font-size:22px;z-index:1}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.ph{aspect-ratio:16/10;border-radius:16px;border:1px dashed var(--line);display:grid;place-items:center;text-align:center;padding:14px;color:var(--mut);font-size:14px;
+background:linear-gradient(135deg,color-mix(in srgb,var(--a) 22%,transparent),color-mix(in srgb,var(--b) 26%,transparent))}
+.ph svg{width:34px;height:34px;margin-bottom:6px;opacity:.8}
+.stack{color:var(--mut);font-size:15px}
+.note{margin-top:60px;font-size:13px;color:var(--mut);border-top:1px solid var(--line);padding-top:14px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:14px}
+.fig{margin:0}
+.thumb{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);cursor:zoom-in;position:relative}
+.thumb:hover{border-color:var(--b)}
+.thumb img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.thumb.diag img{object-fit:contain;background:#fff}
+.thumb::after{content:"Ampliar";position:absolute;right:10px;bottom:10px;font:500 13px "IBM Plex Sans",sans-serif;background:rgba(6,9,25,.8);color:#fff;padding:4px 12px;border-radius:999px}
+.fig figcaption{color:var(--mut);font-size:14px;line-height:1.45;margin-top:8px}
+.shots.one{grid-template-columns:minmax(0,680px);justify-content:center}.shots.one figcaption{text-align:center}
+.lb{position:fixed;inset:0;z-index:20;background:rgba(4,6,20,.94);overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 60px) 16px calc(env(safe-area-inset-bottom,0px) + 32px);cursor:zoom-out}
+.lb img{display:block;margin:0 auto;max-width:min(100%,1100px);height:auto;border-radius:8px;background:#fff}
+.lb button{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:16px;font:500 15px "IBM Plex Sans",sans-serif;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 18px;cursor:pointer}
+.ft{font:700 17px "Space Grotesk",sans-serif;margin:26px 0 12px!important}
+.sub{font-size:18px;margin:26px 0 14px}
+.who{display:block;font-weight:500;font-size:13px;margin-bottom:3px}
+.c1{color:var(--a)}.c2{color:var(--b)}.c3{color:#1fa88f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .c3{color:#4fd8bd}}
+:root[data-theme="dark"] .c3{color:#4fd8bd}
+section.blk .ba p{margin:0;max-width:none;color:var(--mut);font-size:16px}
+.ic{width:22px;height:22px;flex:none;stroke:var(--b);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ba h3.ico{display:flex;align-items:center;gap:10px}
+.pbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:22px}
+.pbs>div{border-left:2px solid var(--b);padding:2px 0 2px 16px}
+.pbs h3{font-size:17px;margin-bottom:4px}
+section.blk .pbs p{margin:0;color:var(--mut);font-size:16px}
+.flow li.opt{border-style:dashed}
+.tag{display:block;font-size:12px;color:var(--mut);margin-bottom:4px}
+.c4{color:#b85f00}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .c4{color:#ffb454}}
+:root[data-theme="dark"] .c4{color:#ffb454}
+section.blk p.cap{margin-top:14px;color:var(--mut);font-size:14px}
+.hint{font:400 15px "IBM Plex Sans",sans-serif;color:var(--mut)}
+.sub{text-align:center}
+.shots.pair{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}
+.flow.f6 li{flex:1 1 135px}
+.shots.q{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:600px){.shots.q{grid-template-columns:1fr}}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:no-preference){.view:not([hidden]){animation:in .35s ease}@keyframes in{from{opacity:0}to{opacity:1}}}
+@media (max-width:560px){.flow li{max-width:none;flex-basis:100%}.flow li:not(:last-child)::after{content:"⌄";right:auto;left:50%;top:auto;bottom:-20px;transform:translateX(-50%)}.flow{gap:22px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<button class="brand" data-go="inicio">Leonardo Maioli</button>
+<nav aria-label="Projetos">
+<button data-go="doa">DoA System</button>
+<button data-go="contratos">Contratos Regulados</button>
+</nav>
+</div></header>
+
+<main class="wrap">
+<div class="view" id="v-inicio">
+<div class="hero">
+<div class="hero-text">
+<h1>Portfólio de Projetos</h1>
+<p>Profissional de TI focado em transformar processos manuais e descentralizados em sistemas e automações centralizados e rastreáveis, atuando em todo o ciclo da solução, do mapeamento com a área de negócio à implantação e adoção pelos usuários. Aqui estão exemplos de casos reais, e novos projetos são adicionados aos poucos.</p>
+<div class="links">
+<a class="btn main" href="assets/cv_leonardo_severgnine_maioli.pdf" download="cv_leonardo_severgnine_maioli.pdf" id="cv">Baixar currículo</a>
+<a class="btn" href="https://linkedin.com/in/leonardo-severgnine-maioli-8042702aa" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div>
+<div class="photo"><img src="assets/img/foto-leonardo.jpg" alt="Foto de Leonardo Severgnine Maioli" width="480" height="480"></div>
+</div>
+<div class="sel">
+<h2>Explore meus projetos</h2>
+<p>Em cada projeto, você poderá entender o problema, o antes, a solução, o depois e os resultados.</p>
+<div class="orbs">
+<button class="orb" data-go="doa"><i class="planet p1"></i><div><h3>DoA System</h3><span>Sistema corporativo para centralizar propostas de compra e venda de energia, antes em planilhas e e-mails.</span></div></button>
+<button class="orb" data-go="contratos"><i class="planet p2"></i><div><h3>Contratos Regulados</h3><span>App para centralizar obrigações contratuais da área Regulatória, abrangendo 34 áreas da empresa.</span></div></button>
+</div>
+</div>
+</div>
+
+<article class="case view" id="v-doa" hidden>
+<button class="back" data-go="inicio">‹ Voltar aos projetos</button>
+<h1>DoA System: centralizando e automatizando propostas de compra e venda de energia</h1>
+<p class="lead">Sistema corporativo que reúne em uma única ferramenta todas as etapas do processo de aprovação (DoA) dos contratos de compra e venda de energia da CTG Brasil, da abertura da proposta à formalização do contrato.</p>
+<div class="kpis">
+<div class="kpi"><b>393</b><small>propostas processadas, 275 concluídas</small></div>
+<div class="kpi"><b>~15</b><small>usuários diretos, ~30 pessoas impactadas</small></div>
+<div class="kpi"><b>Jul/2025</b><small>início da operação em produção, há mais de um ano</small></div>
+</div>
+
+<section class="blk"><h2>Contexto: a área Comercial</h2>
+<p>A área Comercial da CTG Brasil reúne três subáreas, e cada uma tem um papel no processo de aprovação dos contratos de energia.</p>
+<div class="ba"><div><h3 class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M9.5 15l2 2 3.5-4"/></svg>Comercialização</h3><p>Cria e fecha os contratos de compra e venda de energia.</p></div><div><h3 class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v15H4z"/><path d="M4 9h16M8 3v4M16 3v4"/><path d="M8 17l3-3 2 2 3-3"/></svg>Planejamento Energético</h3><p>Planeja a energia de curto, médio e longo prazo, com projeções de oferta e demanda.</p></div><div><h3 class="ico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/></svg>Inteligência de Mercado e Portfólio</h3><p>Gerencia o portfólio de contratos e o balanço entre compra e venda, e analisa mercado, cenários de preços e concorrência para embasar as decisões.</p></div></div></section>
+
+<section class="blk"><h2>O processo de DoA</h2>
+<p>Na CTG Brasil, todo contrato de compra e venda de energia passa pelo processo de DoA (Delegation of Approval), em que as aprovações seguem níveis de responsabilidade diferentes. Cada área executa as suas etapas, até a aprovação final e a formalização do contrato.</p>
+<ol class="flow" style="margin-top:22px"><li class="opt"><span class="who c4">Planejamento Energético</span><span class="tag">Só em contratos de curto prazo</span>Cria ordens de compra e venda com os detalhes a seguir e as repassa ao Comercial.</li><li><span class="who c1">Comercialização</span>Abre a proposta após iniciar a negociação com o cliente, preenchendo os dados iniciais.</li><li><span class="who c2">Portfólio</span>Avalia se a proposta está de acordo com a estratégia e a capacidade da empresa e a encaminha para aprovação no nível adequado ao valor do negócio.</li><li><span class="who c1">Comercialização</span>Recebe o resultado, aprovado ou não, detalha o contrato e fecha o negócio.</li><li><span class="who c3">Inteligência de Mercado</span>Recebe as informações do fechamento e formaliza o contrato no sistema corporativo.</li></ol>
+</section>
+
+<section class="blk"><h2>Como era antes</h2>
+<p>Antes do DoA System, o processo inteiro acontecia por e-mail. Cada vez que uma área concluía a sua etapa, como a abertura da proposta ou a aprovação, ela avisava a seguinte com uma mensagem enviada à mão, sem padrão de formato ou de conteúdo. Para os cálculos intermediários, cada subárea copiava os dados recebidos para planilhas próprias, que não eram compartilhadas. O resultado eram várias versões dos mesmos dados circulando ao mesmo tempo, e o andamento de uma proposta dependia de alguém lembrar de enviar, e de outra pessoa receber, o e-mail certo.</p>
+<div class="pbs"><div><h3>Auditoria trabalhosa</h3><p>Para reconstruir a história de uma proposta, era preciso percorrer e-mails e anexos um a um.</p></div><div><h3>Dados sem padrão</h3><p>Cada área guardava a sua versão das informações, em planilhas próprias e e-mails escritos de formas diferentes.</p></div><div><h3>Replicação manual</h3><p>Os mesmos dados eram copiados de e-mails para planilhas em cada área, a cada etapa.</p></div><div><h3>Fluxo preso ao e-mail</h3><p>A proposta só avançava quando alguém enviava, e outra pessoa recebia, o e-mail manual.</p></div><div><h3>Planilhas sujeitas a erro</h3><p>Preencher e conferir planilhas era repetitivo e trabalhoso, e um erro podia passar despercebido até uma etapa posterior.</p></div></div></section>
+
+<section class="blk"><h2>O DoA System</h2>
+<p>O sistema foi criado para reunir essas atividades em um só lugar e automatizar o processo. Hoje, todas as etapas descritas acima são feitas dentro dele, e cada subárea acessa apenas as abas do seu papel, o que mantém o controle de quem pode fazer o quê.</p>
+<p>Foi desenvolvido em Python (Flask), JavaScript, HTML e CSS e roda em servidor interno da empresa. Os dados ficam em SQL Server, o Power Automate envia e-mails padronizados a cada etapa, e o SharePoint guarda os contratos como evidência para auditoria.</p>
+<h3 class="sub">Estrutura do sistema</h3>
+<div class="shots one"><figure class="fig"><button class="thumb diag" data-zoom aria-label="Ampliar: Arquitetura: acesso pelo navegador, banco de dados corporativo, SharePoint para anexos, Power Automate para e-mails e hospedagem em servidor interno."><img src="assets/img/doa-estrutura-do-sistema.png" alt="Diagrama da arquitetura do DoA System: usuários acessam pelo navegador; o sistema em Flask, JavaScript e CSS se conecta ao banco de dados corporativo, ao SharePoint e ao Power Automate, e roda em servidor interno." loading="lazy"></button><figcaption>Arquitetura: acesso pelo navegador, banco de dados corporativo, SharePoint para anexos, Power Automate para e-mails e hospedagem em servidor interno.</figcaption></figure></div></section>
+
+<section class="blk"><h2>Benefícios</h2>
+<div class="ba"><div><h3>Padronizado e automático</h3><p>Cada etapa concluída dispara um e-mail automático e padronizado para a próxima área, que recebe o aviso sem depender de mensagem manual.</p></div><div><h3>Cálculos integrados ao sistema</h3><p>Os cálculos que cada área fazia em planilhas próprias passam a ser feitos pelo sistema, a partir dos dados que o usuário já preencheu. Um exemplo é o VaR (medida de risco) da contraparte, calculado antes de abrir uma proposta: antes, o time o calculava em uma planilha e guardava o resultado em outra como evidência. Agora o cálculo é automático, e o resultado é enviado e registrado no banco de dados.</p></div><div><h3>Informações centralizadas</h3><p>Os dados de cada proposta, antes espalhados em planilhas e e-mails, ficam organizados em tabelas SQL Server, em uma base única do processo.</p></div><div><h3>Integração entre áreas</h3><p>Com um único banco de dados, o que uma área preenche já aparece para a seguinte. A equipe de Portfólio, por exemplo, analisa a proposta com os dados do Comercial já na tela, sem procurar em e-mails.</p></div><div><h3>Validações no fluxo</h3><p>Verificações que eram manuais viram controles do próprio sistema. Um erro como uma data de entrega posterior à data de pagamento é barrado antes de a proposta avançar, e não descoberto numa etapa seguinte.</p></div><div><h3>Rastreabilidade e auditoria</h3><p>Os contratos, que ficavam só como anexos de e-mail, agora são guardados em pastas estruturadas no SharePoint e podem ser localizados pelos metadados do contrato, o que facilita a auditoria.</p></div></div></section>
+
+<section class="blk"><h2>Exemplos de duas telas do sistema <span class="hint">(clique para expandi-las)</span></h2><div class="shots"><figure class="fig"><button class="thumb " data-zoom aria-label="Ampliar: Nova proposta (New Deal): etapa de inserção de contraparte, tipo de energia, período, volumes e preços. Dados fictícios."><img src="assets/img/doa-tela-new-deal.png" alt="Tela de nova proposta (New Deal) com contraparte, tipo de energia, período, volumes e preços." loading="lazy"></button><figcaption>Nova proposta (New Deal): etapa de inserção de contraparte, tipo de energia, período, volumes e preços. Dados fictícios.</figcaption></figure><figure class="fig"><button class="thumb " data-zoom aria-label="Ampliar: Nova ordem (New Order), do módulo de planejamento de energia. Dados fictícios."><img src="assets/img/doa-tela-new-order.png" alt="Tela de nova ordem (New Order) do módulo Energy Planning, com segmentos e parâmetros do contrato." loading="lazy"></button><figcaption>Nova ordem (New Order), do módulo de planejamento de energia. Dados fictícios.</figcaption></figure></div></section>
+
+<section class="blk"><h2>Reconhecimento</h2>
+<p>🏆 Selecionado entre os 6 melhores projetos de estágio da CTG Brasil, concorrendo ao título de melhor projeto em outubro/2026.</p></section>
+<p class="stack">Python/Flask · JavaScript · HTML · CSS · SQL Server · SharePoint · Power Automate · Git</p>
+</article>
+
+<article class="case view" id="v-contratos" hidden>
+<button class="back" data-go="inicio">‹ Voltar aos projetos</button>
+<h1>Contratos Regulados: controle de obrigações contratuais</h1>
+<p class="lead">Plataforma que permite às áreas responsáveis da CTG Brasil acompanhar as obrigações dos contratos regulados e registrar o seu cumprimento, com prazos e conclusões em um só lugar, usada por 34 áreas da empresa.</p>
+<div class="kpis">
+<div class="kpi"><b>34</b><small>áreas da empresa abrangidas</small></div>
+<div class="kpi"><b>3.130</b><small>obrigações contratuais monitoradas no sistema em 2026</small></div>
+<div class="kpi"><b>Jul/2026</b><small>início da operação em produção</small></div>
+</div>
+
+<section class="blk"><h2>Contexto: contratos regulados</h2>
+<p>O setor elétrico é altamente normatizado. Os contratos regulados da companhia, como os de concessão e os de uso e de conexão de rede (CCT, CCD, CUST e CUSD), estabelecem por meio de suas cláusulas obrigações legais, prazos e responsabilidades que se distribuem entre várias áreas da empresa.</p>
+<p>A área Regulatória atua como agente de governança desse processo: coordena, monitora e comunica, enquanto cada área responsável executa as obrigações que lhe cabem. Com a complexidade e o volume de obrigações crescendo, surgiu a necessidade de padronizar o acompanhamento, reduzir o risco de descumprimento e dar transparência ao que está pendente.</p></section>
+
+<section class="blk"><h2>O processo de gestão</h2>
+<p>O projeto estabeleceu um procedimento formal para a gestão dessas obrigações. De forma geral, o fluxo começa quando um contrato regulado é celebrado ou atualizado por termo aditivo.</p>
+<ol class="flow f6" style="margin-top:22px"><li><span class="who c1">Regulatório</span>Recebe a demanda, um contrato novo ou atualizado, e analisa as obrigações.</li><li><span class="who c1">Regulatório</span>Alinha com as áreas e define quem é responsável por cada obrigação.</li><li><span class="who c1">Regulatório</span>Comunica formalmente às áreas as obrigações atribuídas a cada uma.</li><li><span class="who c3">Áreas responsáveis</span>Executam as obrigações dentro dos prazos estabelecidos.</li><li><span class="who c1">Regulatório</span>Monitora o andamento e as pendências de cada área.</li><li><span class="who c1">Regulatório</span>Consolida o relatório final e reporta o status aos VPs ao fim do ano de referência.</li></ol></section>
+
+<section class="blk"><h2>Como era antes</h2>
+<p>As obrigações estavam dentro dos próprios contratos, em PDF, e o acompanhamento do cumprimento dependia de planilhas e de informações distribuídas entre as áreas. Com tantas cláusulas e tantos responsáveis, era difícil saber o que cada área devia cumprir, em que prazo e se já havia sido cumprido.</p>
+<div class="pbs"><div><h3>Obrigações presas em PDF</h3><p>As exigências estavam espalhadas em cláusulas de contratos em PDF, sem uma base estruturada para consulta.</p></div><div><h3>Responsabilidades pouco claras</h3><p>Havia cláusulas sem área atribuída e outras que envolviam mais de uma área, sem um alinhamento formal.</p></div><div><h3>Controle espalhado</h3><p>O acompanhamento ficava em planilhas e em informações distribuídas, sem uma visão única do que estava pendente.</p></div><div><h3>Pouca rastreabilidade</h3><p>Era difícil comprovar quem concluiu cada obrigação e quando, o que pesa em auditorias.</p></div></div></section>
+
+<section class="blk"><h2>A solução</h2>
+<p>A solução combina o estabelecimento de um novo procedimento formal com a implementação de uma plataforma dedicada para atendê-lo. Na frente de tecnologia, o trabalho foi do entendimento do processo à implantação e à adoção: mapeamento do processo e definição da solução com a área de negócio e a equipe de TI, desenvolvimento do aplicativo e dos fluxos, rotina de migração da base histórica e treinamento dos usuários, com material de apoio e vídeo na Academia CTG.</p>
+<p>O aplicativo foi desenvolvido em Power Apps, com listas SharePoint como base de dados e fluxos do Power Automate para atualizações, notificações e manutenção. Uma rotina em Python valida, trata e carrega na lista, a cada novo ano, as obrigações mantidas pelo Regulatório na planilha-base.</p>
+<h3 class="sub">Estrutura do sistema</h3>
+<div class="shots one"><figure class="fig"><button class="thumb diag" data-zoom aria-label="Ampliar: Arquitetura: aplicativo em Power Apps, fluxos do Power Automate, listas SharePoint, carga anual por rotina em Python e arquivos de histórico e logs."><img src="assets/img/contratos-estrutura-do-sistema.png" alt="Diagrama da arquitetura do sistema: usuários acessam o aplicativo Power Apps, que se integra a fluxos do Power Automate e a listas SharePoint de base de dados e de configuração; uma rotina em Python carrega a base anual e arquivos no SharePoint guardam históricos e logs." loading="lazy"></button><figcaption>Arquitetura: aplicativo em Power Apps, fluxos do Power Automate, listas SharePoint, carga anual por rotina em Python e arquivos de histórico e logs.</figcaption></figure></div></section>
+
+<section class="blk"><h2>Decisões técnicas</h2>
+<div class="ba"><div><h3>SharePoint como base de dados</h3><p>A arquitetura inicial previa SQL Server, mas a integração direta com o Power Apps e o Power Automate exigia conectores fora do licenciamento disponível. As listas SharePoint mantiveram a integração nativa e atenderam ao volume de obrigações.</p></div><div><h3>Virada anual da base</h3><p>A lista guarda só o ano vigente. No fim de cada ano, os registros são exportados para arquivos de histórico em CSV e JSON e a lista é renovada, o que respeita o limite de 5.000 itens do SharePoint e mantém o aplicativo rápido.</p></div><div><h3>Edição controlada</h3><p>Os usuários têm acesso somente de leitura à lista. A conclusão de obrigações passa por fluxos do Power Automate, que atualizam apenas os campos necessários e registram quem concluiu, quando e com qual comentário.</p></div></div></section>
+
+<section class="blk"><h2>Benefícios</h2>
+<div class="ba"><div><h3>Base única e estruturada</h3><p>Todas as obrigações dos cinco tipos de contrato ficam em uma só base, com contrato, cláusula, área responsável, frequência e prazo.</p></div><div><h3>Responsabilidades claras</h3><p>Cada obrigação tem a área responsável atribuída e validada com as próprias áreas, e o aplicativo mostra a cada usuário as obrigações da sua área.</p></div><div><h3>Conclusão simples</h3><p>O usuário filtra as obrigações, conclui uma a uma ou várias de uma vez, e pode deixar um comentário. A tela só carrega o que está pendente ou vence no mês.</p></div><div><h3>Notificações automáticas</h3><p>E-mails programados avisam a abertura de cada nova referência e listam as pendências de cada área. Áreas sem pendência não recebem aviso, e o Regulatório é informado a cada conclusão.</p></div><div><h3>Rastreabilidade e auditoria</h3><p>Cada conclusão registra usuário, data e comentário. Logs de operações e de erros e os históricos anuais em CSV e JSON deixam o ciclo auditável.</p></div><div><h3>Operação sustentável</h3><p>Uma tela de administração, restrita a usuários autorizados, liga o modo de manutenção e executa os fluxos da virada anual, e um manual técnico documenta a manutenção da solução.</p></div></div></section>
+
+<section class="blk"><h2>Exemplos de quatro telas do sistema <span class="hint">(clique para expandi-las)</span></h2><div class="shots q"><figure class="fig"><button class="thumb " data-zoom aria-label="Ampliar: Tela inicial: o usuário seleciona a área de responsabilidade para ver as obrigações correspondentes."><img src="assets/img/contratos-tela-inicial.png" alt="Tela inicial do aplicativo, com a lista de áreas de responsabilidade." loading="lazy"></button><figcaption>Tela inicial: o usuário seleciona a área de responsabilidade para ver as obrigações correspondentes.</figcaption></figure><figure class="fig"><button class="thumb " data-zoom aria-label="Ampliar: Obrigações da área: resumo por tipo de contrato, filtros e seleção de várias obrigações para conclusão em lote."><img src="assets/img/contratos-tela-obrigacoes-da-area.png" alt="Tela de obrigações da área, com resumo por tipo de contrato, filtros e lista de obrigações." loading="lazy"></button><figcaption>Obrigações da área: resumo por tipo de contrato, filtros e seleção de várias obrigações para conclusão em lote.</figcaption></figure><figure class="fig"><button class="thumb " data-zoom aria-label="Ampliar: Detalhe de uma obrigação: informações completas e conclusão individual, com comentário opcional."><img src="assets/img/contratos-tela-detalhe-da-obrigacao.png" alt="Tela de detalhe de uma obrigação, com campos de status e comentário." loading="lazy"></button><figcaption>Detalhe de uma obrigação: informações completas e conclusão individual, com comentário opcional.</figcaption></figure><figure class="fig"><button class="thumb " data-zoom aria-label="Ampliar: Administração (apenas usuários autorizados): modo de manutenção e execução dos fluxos da virada anual."><img src="assets/img/contratos-tela-administracao.png" alt="Tela de administração, com status do aplicativo e execução dos fluxos da virada anual." loading="lazy"></button><figcaption>Administração (apenas usuários autorizados): modo de manutenção e execução dos fluxos da virada anual.</figcaption></figure></div></section>
+
+<p class="stack" style="margin-top:44px">Power Apps · SharePoint · Power Automate · Python · Excel</p>
+</article>
+
+
+</main>
+<footer><div class="wrap">Leonardo Severgnine Maioli · leo.svgmaioli@gmail.com</div></footer>
+
+<script>
+(function(){
+var ids=["inicio","doa","contratos"];
+function show(id){
+if(ids.indexOf(id)<0)id="inicio";
+ids.forEach(function(i){document.getElementById("v-"+i).hidden=(i!==id)});
+document.querySelectorAll("nav button").forEach(function(b){b.setAttribute("aria-current",b.dataset.go===id?"true":"false")});
+window.scrollTo(0,0);
+}
+function route(){show(location.hash.replace("#",""))}
+document.addEventListener("click",function(e){
+var t=e.target.closest("[data-go]");if(!t)return;
+var id=t.dataset.go;
+try{location.hash=id}catch(x){}
+show(id);
+});
+window.addEventListener("hashchange",route);
+route();
+})();
+</script>
+<script>
+(function(){
+var lb=null,last=null;
+function close(){if(lb){lb.remove();lb=null;if(last)last.focus()}}
+document.addEventListener("click",function(e){
+var t=e.target.closest("[data-zoom]");
+if(t){last=t;var src=t.querySelector("img");
+lb=document.createElement("div");lb.className="lb";lb.setAttribute("role","dialog");lb.setAttribute("aria-modal","true");
+var im=document.createElement("img");im.src=src.src;im.alt=src.alt;
+var b=document.createElement("button");b.textContent="Fechar";
+lb.appendChild(im);lb.appendChild(b);document.body.appendChild(lb);b.focus();return}
+if(lb&&e.target.closest(".lb"))close();
+});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
+</script>
+</body>
+</html>
